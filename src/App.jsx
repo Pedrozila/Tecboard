@@ -1,5 +1,5 @@
 import "./App.css";
-import { FormularioDeEventos } from "./componentes/FormularioDeEventos";
+import { FormularioDeEventos } from "./componentes/FormularioEvento";
 
 function App() {
   return (
