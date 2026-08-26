@@ -1,3 +1,5 @@
+import './formulario-de-eventos.estilos.css';
+
 import { FormularioCampo } from "../CampoDeFormulario";
 import { FormularioTitulo } from "../TituloFormulario";
 import { Label } from "../Label";
@@ -9,7 +11,12 @@ export function FormularioDeEventos() {
       <FormularioTitulo>Titulo do Form</FormularioTitulo>
       <FormularioCampo>
         <Label htmlFor="nomeEvento">Nome do Evento:</Label>
-        <CampoEntrada props={{ type: "text", id: "nome", placeholder: "summer dev hits" }} />
+        <CampoEntrada 
+          type="text" 
+          id="nome" 
+          placeholder="summer dev hits"
+          name="nomeEvento"  
+        />
       </FormularioCampo>
     </form>
   );
