@@ -1,20 +1,8 @@
 import "./App.css";
-
-function FormularioTitulo(props) {
-  return <h2>{props.children}</h2>;
-}
-
-function FormularioCampo({ children }) {
-  return <fieldset>{children}</fieldset>;
-}
-
-function Label ( { children, htmlFor } ) {
-  return <label htmlFor={htmlFor}>{children}</label>;
-}
-
-function CampoEntrada ({props}) {
-  return <input {...props} />;
-}
+import { FormularioCampo } from "./componentes/CampoDeFormulario";
+import { CampoEntrada } from "./componentes/CampoDeEntrada";
+import { Label } from "./componentes/Label";
+import { FormularioTitulo } from "./componentes/TituloFormulario";
 
 function FormularioDeEventos() {
   return (
