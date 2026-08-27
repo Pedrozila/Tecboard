@@ -1,0 +1,14 @@
+.botao-formulario {
+  background-color: #4CAF50;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.botao-formulario:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
