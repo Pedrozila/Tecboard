@@ -5,10 +5,16 @@
   width: 384px;
   max-width: 90%;
   margin: 64px auto;
+  gap: 16px;
 }
 
 .campos-formulario {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.acoes {
+    margin-top: 32px;
+    text-align: center;
 }

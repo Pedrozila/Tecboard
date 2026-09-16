@@ -31,7 +31,7 @@ export function FormularioDeEventos() {
           />
         </FormularioCampo>
       </div>
-      <div>
+      <div className="acoes">
         <BotaoFormulario>Criar Evento</BotaoFormulario>
       </div>    
     </form>
