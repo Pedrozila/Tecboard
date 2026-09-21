@@ -5,6 +5,8 @@ import { Tema } from "./componentes/Tema";
 
 function App() {
 
+  console.log("App renderizou");
+
   const temas = [
     {
       id: "1",
@@ -58,6 +60,7 @@ function App() {
          <Tema tema={temas[5]} /> 
       </section>
     </main>
+
   );
 }
 
