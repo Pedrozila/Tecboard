@@ -1,3 +1,7 @@
 .titulo-tema {
-    color: #fff
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 10%;
 }
