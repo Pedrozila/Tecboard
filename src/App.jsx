@@ -9,27 +9,27 @@ function App() {
   const temas = [
     {
       id: "1",
-      nome: "Front-End",
+      nome: "front-end",
     },
     {
       id: "2",
-      nome: "Front-End",
+      nome: "back-end",
     },
     {
       id: "3",
-      nome: "Front-End",
+      nome: "devops",
     },
     {
       id: "4",
-      nome: "Front-End",
+      nome: "inteligência artificial",
     },
     {
       id: "5",
-      nome: "Front-End",
+      nome: "data-science",
     },
     {
       id: "6",
-      nome: "Front-End",
+      nome: "cloud",
     },
   ];
 
@@ -42,7 +42,7 @@ function App() {
       <FormularioDeEventos />
       {temas.map(function (item) {
         return (
-          <section>
+          <section key={item.id}>
             <Tema tema={item} />
           </section>
         );
