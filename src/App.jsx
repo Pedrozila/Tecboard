@@ -2,6 +2,7 @@ import "./App.css";
 import { Banner } from "./componentes/Banner";
 import { FormularioDeEventos } from "./componentes/FormularioEvento";
 import { Tema } from "./componentes/Tema";
+import { CardEvento } from "./componentes/CardEvento";
 
 function App() {
   console.log("App renderizou");
