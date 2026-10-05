@@ -23,6 +23,18 @@ export function FormularioDeEventos({ temas }) {
         </FormularioCampo>
 
         <FormularioCampo>
+          <Label htmlFor="capa">
+            Capa do Evento:
+          </Label>
+          <CampoEntrada
+            type="text"
+            id="capa"
+            placeholder="http://...."
+            name="capa"
+          />
+        </FormularioCampo>
+
+        <FormularioCampo>
           <Label htmlFor="dataEvento">Data do Evento:</Label>
           <CampoEntrada
             type="date"
@@ -31,6 +43,7 @@ export function FormularioDeEventos({ temas }) {
             name="dataEvento"
           />
         </FormularioCampo>
+
          <FormularioCampo>
             <Label htmlFor="tema">
               Tema do evento

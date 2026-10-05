@@ -1,9 +1,9 @@
 import './lista-suspensa.estilos.css'
 
-export function ListaSuspensa ({ itens }) {
+export function ListaSuspensa ({ itens, ... rest }) {
 
     return (
-        <select className='lista-suspensa-form' defaultValue="">
+        <select className='lista-suspensa-form' defaultValue="" {... rest}>
             <option value="" disabled>
                 Selecione um tema
             </option>
