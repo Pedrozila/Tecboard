@@ -8,8 +8,20 @@ import { BotaoFormulario } from "../Botao";
 import { ListaSuspensa } from "../ListaSuspensa";
 
 export function FormularioDeEventos({ temas }) {
+
+  function aoFormSubmetido(formData) {
+   const evento = {
+      capa: formData.get("capa"),
+      tema: temas.find( function (item) {
+        return item.id == formData.get("tema")
+      }),
+      data: new Date(formData.get("dataEvento")),
+      titulo: formData.get("nomeEvento"),
+    }
+  }
+
   return (
-    <form className="formulario-evento">
+    <form className="formulario-evento" action={aoFormSubmetido}>
       <FormularioTitulo>Titulo do Form</FormularioTitulo>
       <div className="campos-formulario">
         <FormularioCampo>
