@@ -2,6 +2,7 @@ import "./App.css";
 import { Banner } from "./componentes/Banner";
 import { FormularioDeEventos } from "./componentes/FormularioEvento";
 import { Tema } from "./componentes/Tema";
+import { useState } from "react";
 import { CardEvento } from "./componentes/CardEvento";
 
 function App() {
@@ -34,17 +35,17 @@ function App() {
     },
   ];
 
-  const eventos = [
+  const [eventos, setEventos] = useState([
     {
-      capa: 'https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png',
+      capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
       tema: temas[0],
       data: new Date(),
-      titulo: 'Mulheres no front',
-    }
-  ]
+      titulo: "Mulheres no front",
+    },
+  ]);
 
   function adicionarEvento(evento) {
-    eventos.push(evento)
+    setEventos([...eventos, evento]);
   }
 
   return (
@@ -54,17 +55,27 @@ function App() {
       </header>
       <Banner />
       <FormularioDeEventos temas={temas} aoSubmeter={adicionarEvento} />
-      {temas.map(function (item) {
-        return (
-          <section key={item.id}>
-            <Tema tema={item} />
-            {eventos.map(function (item, index) {
-               return <CardEvento evento={item} key={index} />
-            })}
-            
-          </section>
-        );
-      })}
+      <section className="container">
+        {temas.map(function (tema) {
+          if (!eventos.some( function(evento) {
+            return evento.tema.id === tema.id
+          })) {
+            return null;
+          }
+          return (
+            <section key={tema.id}>
+              <Tema tema={tema} />
+              <div className="enventos">
+                {eventos.filter(function (evento) {
+                  return evento.tema.id === tema.id
+                }).map(function (evento, index) {
+                  return <CardEvento evento={evento} key={index} />;
+                })}
+              </div>
+            </section>
+          );
+        })}
+      </section>
     </main>
   );
 }
